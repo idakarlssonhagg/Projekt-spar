@@ -4,9 +4,15 @@
     --moss-green: #879A7A;
     --stone: #E8E5DC;
     --graphite: #292D2C;
-    --earth-clay: #292D2C;
-    --soft-sage: #292D2C;
-    --font-color: #000;
+    --earth-clay: #A86F51;
+    --soft-sage: #C4D2B9;
+
+
+    --primary-color: #000;
+    --secondary-color: #ffffff;
+    --secondary-font-color: #7c7c7c;
+    --trituary-font-color: #b8b8b8;
+    --secondary-bg-color: #cfcfcf;
 
     /* Text-size vars */
     --font-size-h1: 
@@ -15,4 +21,23 @@
     --font-size-h4: 
     --font-size-text:
 
+}
+
+/* Marquee */
+.marquee {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    overflow: hidden;
+    white-space: nowrap;
+    height: 42px;
+}
+
+.marquee-content {
+    animation: marquee 15s linear infinite;
+    width: max-content;
+}
+
+.marquee p {
+    margin: 0;
+/* Lägg till fontsize */
 }
