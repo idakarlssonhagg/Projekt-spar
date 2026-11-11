@@ -22,6 +22,13 @@
     --font-size-text:
 
 }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
 
 /* Marquee */
 .marquee {
@@ -40,4 +47,67 @@
 .marquee p {
     margin: 0;
 /* Lägg till fontsize */
+}
+
+/* Marquee animation */
+@keyframes marquee {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Main header */
+.main-header {
+    background-color: var(--graphite);
+    color: var(--secondary-color);
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    height: 93px;
+    padding: 0 16px;
+}
+
+.logo img {
+    height: 93px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    /* Lägg till fontsize */
+}
+
+/* Header icons */
+.header-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-icons img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
