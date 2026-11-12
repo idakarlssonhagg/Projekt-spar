@@ -77,6 +77,17 @@ body {
 .header-icons {
   display: none;
 }
+
+main > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mobileImages {
+  margin-bottom: 15px;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(100vw);
