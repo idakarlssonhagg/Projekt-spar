@@ -204,3 +204,50 @@ main > img,
     object-fit: contain;
   }
 }
+
+/* Product section */
+.product-selection {
+  width: 100%;
+  overflow: hidden;
+  padding: 15px 10px;
+}
+
+.product-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+/* Lägg till fontsize */
+.product-heading h2 {
+  margin: 0;
+}
+
+/* Carousel */
+.product-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 160px;
+  gap: 12px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.product-card {
+  scroll-snap-align: start;
+}
+
+.product-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* Font size */
+.product-card h3 {
+  margin-top: 8px;
+}
