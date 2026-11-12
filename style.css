@@ -78,7 +78,19 @@ body {
   display: none;
 }
 
-main > img {
+main > img,
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+}
+
+.hero img {
   display: block;
   width: 100%;
   height: auto;
