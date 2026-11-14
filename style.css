@@ -41,10 +41,15 @@ body {
 .marquee-content {
   width: max-content;
   animation: marquee 15s linear infinite;
+  gap: 187.5px;
 }
 
 .marquee p {
   margin: 0;
+}
+
+.marquee-content {
+  display: flex;
 }
 
 .main-header {
