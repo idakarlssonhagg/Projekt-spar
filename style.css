@@ -36,12 +36,13 @@ body {
   display: flex;
   align-content: center;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .marquee-content {
   width: max-content;
   animation: marquee 15s linear infinite;
-  gap: 187.5px;
+  gap: calc(100vw / var(--count));
 }
 
 .marquee p {
