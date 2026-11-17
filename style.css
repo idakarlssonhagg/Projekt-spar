@@ -23,7 +23,7 @@
   --font-size-body-regular: 16px;
   --font-size-caption: 14px;
 
-  /* Font weifhts vars */
+  /* Font weights vars */
   --font-weight-bold: 700;
   --font-weight-medium: 500;
   --font-weight-regular: 400;
@@ -154,8 +154,7 @@ main > img,
 
   .marquee p {
     margin: 0;
-    font-size: var(--font-size-h4-title);
-    /* Lägg till fontsize */
+    font-size: var(--font-size-title-mobile);
   }
 
   /* Marquee animation */
@@ -211,7 +210,7 @@ main > img,
   .nav-links a {
     color: var(--secondary-color);
     text-decoration: none;
-    /* Lägg till fontsize */
+    font-size: var(--font-size-h4-title);
   }
 
   /* Header icons */
@@ -243,9 +242,10 @@ main > img,
   margin-bottom: 10px;
 }
 
-/* Lägg till fontsize */
 .product-heading h2 {
   margin: 0;
+  font-size: var(--font-size-title-mobile);
+  font-weight: var(--font-weight-medium);
 }
 
 /* Carousel */
@@ -271,7 +271,8 @@ main > img,
   object-fit: cover;
 }
 
-/* Font size */
 .product-card h3 {
   margin-top: 8px;
+  font-size: var(--font-size-title-mobile);
+  font-weight: var(--font-weight-medium);
 }
