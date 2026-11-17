@@ -14,8 +14,25 @@
   --secondary-bg-color: #cfcfcf;
 
   /* Text-size vars */
-  --font-size-h1: --font-size-h2: --font-size-h3: --font-size-h4:
-    --font-size-text: ;
+  --font-size-h1: 64px;
+  --font-size-h2-subheading: 48px;
+  --font-size-h3-body: 40px;
+  --font-size-h4-title: 32px;
+  --font-size-title-mobile: 25px;
+  --font-size-body-large: 20px;
+  --font-size-body-regular: 16px;
+  --font-size-caption: 14px;
+
+  /* Font weights vars */
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  /* Line heights */
+  --line-height-h2-subheading: 1.1;
+  --line-height-body-large: 1.5;
+  --line-height-body-regular: 1.5;
+  --line-height-caption: 1.4;
 }
 * {
   box-sizing: border-box;
@@ -137,7 +154,7 @@ main > img,
 
   .marquee p {
     margin: 0;
-    /* Lägg till fontsize */
+    font-size: var(--font-size-title-mobile);
   }
 
   /* Marquee animation */
@@ -193,7 +210,7 @@ main > img,
   .nav-links a {
     color: var(--secondary-color);
     text-decoration: none;
-    /* Lägg till fontsize */
+    font-size: var(--font-size-h4-title);
   }
 
   /* Header icons */
@@ -225,9 +242,10 @@ main > img,
   margin-bottom: 10px;
 }
 
-/* Lägg till fontsize */
 .product-heading h2 {
   margin: 0;
+  font-size: var(--font-size-title-mobile);
+  font-weight: var(--font-weight-medium);
 }
 
 /* Carousel */
@@ -253,7 +271,8 @@ main > img,
   object-fit: cover;
 }
 
-/* Font size */
 .product-card h3 {
   margin-top: 8px;
+  font-size: var(--font-size-title-mobile);
+  font-weight: var(--font-weight-medium);
 }
