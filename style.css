@@ -64,7 +64,7 @@ body {
   height: 42px;
   width: 100%;
   display: flex;
-  align-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -73,6 +73,7 @@ body {
   animation: marquee 15s linear infinite;
   gap: calc(100vw / var(--count));
   display: flex;
+  align-items: center;
 }
 
 .marquee p {
@@ -165,7 +166,7 @@ main > img,
 .product-carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 160px;
+  grid-auto-columns: 80%;
   gap: 12px;
 
   overflow-x: auto;
@@ -195,6 +196,14 @@ main > img,
 ======================= */
 
 @media (min-width: 768px) {
+  .product-carousel {
+    grid-auto-columns: 19%;
+    gap: 20px;
+  }
+
+  .product-selection {
+    padding: 30px 40px;
+  }
 
   /* Marquee */
 
