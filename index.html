@@ -71,25 +71,48 @@
     </header>
 
     <main>
-      <picture class="hero">
-        <!-- Mobilbild -->
-        <source
-          srcset="Images/main/Mobile-hero.png"
-          media="(max-width: 768px)"
-        />
+      <!-- Hero section -->
+      <section class="hero-container">
+
+
+        <picture class="hero">
+            <!-- Mobilbild -->
+             <source
+             srcset="Images/main/Mobile-hero.png"
+             media="(max-width: 768px)"
+             />
 
         <!-- Desktopbild -->
         <img src="Images/main/COOL BILD.png" alt="Spår - upptäck naturen" />
       </picture>
 
-      <div class="nyhetsBox">
-        <h4 class="nyheterTitle">Nyheter</h4>
+        <!-- Hero buttons -->
+         <div class="hero-buttons">
+            <a href="#" class="hero-button">
+              <span>Shop for women</span>
+              <img src="Images/icons/white-arrow.svg" alt="" />
+            </a>
+
+            <a href="#" class="hero-button">
+              <span>Shop for men</span>
+              <img src="Images/icons/white-arrow.svg" alt="" />
+            </a>
+         </div>
+      </section>
+
+      <section class="news-section">
         <img
-          class="nyheter mobileimages"
+          class="mobileImages"
           src="Images/main/Nyhetsbild-1.png"
           alt=""
         />
-      </div>
+
+        <img
+          class="desktopImage"
+          src="Images/main/Nyhetsbild-1.png"
+          alt=""
+        />
+      </section> 
 
       <section class="product-selection">
         <div class="product-heading">
