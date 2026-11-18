@@ -147,8 +147,28 @@ main > img,
 
 /* News image */
 
-.mobileImages {
+.nyhetsBox {
+  position: relative;
+}
+
+.nyheterTitle {
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  z-index: 1;
+  margin: 0;
+  color: #000;
+  font-size: var(--font-size-h4-title);
+}
+
+.nyheter {
+  display: block;
   margin-bottom: var(--spacing-16);
+  height: 493px;
+  min-height: 493px;
+  width: 100vw;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Product section */
@@ -214,8 +234,7 @@ main > img,
 .textFilosofi {
   font-family: "DM sans";
   font-weight: var(--font-size-body-medium);
-  font-style: Medium;
-  font-size: 25px;
+  font-size: var(--font-size-title-mobile);
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
