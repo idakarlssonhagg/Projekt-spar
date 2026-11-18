@@ -268,6 +268,30 @@ main > img,
   font-weight: var(--font-weight-medium);
 }
 
+/* filosofi */
+
+.filosofi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.titleFilosofi,
+.textFilosofi {
+  font-family: "DM sans";
+  font-weight: var(--font-size-body-medium);
+  font-size: var(--font-size-title-mobile);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  padding-left: 11.5px;
+  padding-right: 11.5px;
+}
+
+.mobileFilosofi {
+  width: 100vw;
+}
+
 /* =======================
       DESKTOP
 ======================= */
@@ -284,14 +308,14 @@ main > img,
 
   /* Marquee */
 
-    .marquee p {
+  .marquee p {
     margin: 0;
     font-size: var(--font-size-caption);
   }
 
   /* Header */
 
-    .main-header {
+  .main-header {
     background-color: var(--graphite);
     color: var(--secondary-color);
 
@@ -318,7 +342,7 @@ main > img,
 
   /* Navigation */
 
-    .nav-links {
+  .nav-links {
     display: flex;
     align-items: center;
     gap: var(--spacing-32);
@@ -336,8 +360,6 @@ main > img,
     text-decoration: none;
     font-size: var(--font-size-body-regular);
   }
-
-    /* Header icons */
 
   .header-icons { 
     display: flex;
@@ -373,18 +395,17 @@ main > img,
   }
 }
 
-
 /* =======================
       ANIMATIONS
 ======================= */
 
-  /* Marquee animation */
-  @keyframes marquee {
-    from {
-      transform: translateX(100vw);
-    }
-
-    to {
-      transform: translateX(-100%);
-    }
+/* Marquee animation */
+@keyframes marquee {
+  from {
+    transform: translateX(100vw);
   }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
