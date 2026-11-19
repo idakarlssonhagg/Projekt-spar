@@ -228,14 +228,37 @@ main > img,
 .product-heading {
   display: flex;
   align-items: center;
-  gap: var(--spacing-24);
+  gap: var(--spacing-16);
   margin-bottom: var(--spacing-8);
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .product-heading h2 {
   margin: 0;
   font-size: var(--font-size-title-mobile);
   font-weight: var(--font-weight-medium);
+}
+
+.cta-button {
+  display: inline-flex;
+  width: 190px;
+  height: 38px;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--earth-clay);
+  color: white;
+
+  border: none;
+  border-radius: 20px;
+
+  text-decoration: none;
+  text-align: center;
+  font-size: var(--font-size-body-regular);
 }
 
 /* Product carousel */
