@@ -79,14 +79,23 @@ body {
 
 .marquee-content {
   width: max-content;
-  animation: marquee 20s linear infinite;
-  gap: calc(100vw / var(--count));
+  animation: marquee 12s linear infinite;
   display: flex;
-  align-items: center;
+  flex-shrink: 0;
 }
 
-.marquee p {
+.marquee-text {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 200px;
+  padding-right: 200px;
+}
+
+.marquee-text p {
   margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Header */
@@ -206,14 +215,37 @@ main > img,
 .news-section img {
   width: 100%;
   display: block;
-  height: 540px;
+  height: 700px;
   object-fit: cover;
   object-position: center;
 }
 
 /* Döljer andra bild på mobil */
-.news-section .desktopImage {
+.news-section .desktop-image {
   display: none;
+}
+
+.mobile-images,
+.desktop-image {
+  position: relative;
+}
+
+.news-dark,
+.news-light {
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  margin: 0;
+  font-size: var(--font-size-h4-title);
+  font-weight: var(--font-weight-medium);
+}
+
+.news-dark {
+  color: var(--graphite);
+}
+
+.news-light {
+  color: var(--secondary-color);
 }
 
 /* Product section */
@@ -331,10 +363,25 @@ main > img,
 
   /* Marquee */
 
-  .marquee p {
+  .marquee {
+    height: 42px;
+  }
+
+  .marquee-content {
+    animation-duration: 15s;
+  }
+
+  .marquee-text {
+    gap: 400px;
+    padding-right: 400px;
+  }
+
+  .marquee-text p {
     margin: 0;
     font-size: var(--font-size-caption);
+    white-space: nowrap;
   }
+
 
   /* Header */
 
@@ -413,8 +460,18 @@ main > img,
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .news-section .desktopImage {
+  .news-section .desktop-image {
     display: block;
+  }
+
+  .news-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-dark,
+  .news-light {
+    font-size: var(--font-size-h2-subheading);
+    font-weight: var(--font-weight-regular);
   }
 }
 
@@ -425,10 +482,10 @@ main > img,
 /* Marquee animation */
 @keyframes marquee {
   from {
-    transform: translateX(100vw);
+    transform: translateX(0);
   }
 
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
