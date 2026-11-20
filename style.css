@@ -79,14 +79,23 @@ body {
 
 .marquee-content {
   width: max-content;
-  animation: marquee 20s linear infinite;
-  gap: calc(100vw / var(--count));
+  animation: marquee 12s linear infinite;
   display: flex;
-  align-items: center;
+  flex-shrink: 0;
 }
 
-.marquee p {
+.marquee-text {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 200px;
+  padding-right: 200px;
+}
+
+.marquee-text p {
   margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Header */
@@ -331,10 +340,25 @@ main > img,
 
   /* Marquee */
 
-  .marquee p {
+  .marquee {
+    height: 42px;
+  }
+
+  .marquee-content {
+    animation-duration: 15s;
+  }
+
+  .marquee-text {
+    gap: 400px;
+    padding-right: 400px;
+  }
+
+  .marquee-text p {
     margin: 0;
     font-size: var(--font-size-caption);
+    white-space: nowrap;
   }
+
 
   /* Header */
 
@@ -425,10 +449,10 @@ main > img,
 /* Marquee animation */
 @keyframes marquee {
   from {
-    transform: translateX(100vw);
+    transform: translateX(0);
   }
 
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
