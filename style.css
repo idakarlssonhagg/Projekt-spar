@@ -215,14 +215,37 @@ main > img,
 .news-section img {
   width: 100%;
   display: block;
-  height: 540px;
+  height: 700px;
   object-fit: cover;
   object-position: center;
 }
 
 /* Döljer andra bild på mobil */
-.news-section .desktopImage {
+.news-section .desktop-image {
   display: none;
+}
+
+.mobile-images,
+.desktop-image {
+  position: relative;
+}
+
+.news-dark,
+.news-light {
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  margin: 0;
+  font-size: var(--font-size-h4-title);
+  font-weight: var(--font-weight-medium);
+}
+
+.news-dark {
+  color: var(--graphite);
+}
+
+.news-light {
+  color: var(--secondary-color);
 }
 
 /* Product section */
@@ -437,8 +460,18 @@ main > img,
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .news-section .desktopImage {
+  .news-section .desktop-image {
     display: block;
+  }
+
+  .news-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-dark,
+  .news-light {
+    font-size: var(--font-size-h2-subheading);
+    font-weight: var(--font-weight-regular);
   }
 }
 
