@@ -113,8 +113,10 @@ body {
 
 .logo img {
   display: block;
+  object-fit: contain;
   width: auto;
   height: 64px;
+  max-width: 100%;
 }
 
 .hamburger-menu {
@@ -389,7 +391,7 @@ main > img,
   }
 
   .logo img {
-    height: 93px;
+    height: 64px;
     width: auto;
     display: block;
     object-fit: contain;
