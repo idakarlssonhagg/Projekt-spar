@@ -10,6 +10,7 @@
   --graphite: #292d2c;
   --earth-clay: #a86f51;
   --soft-sage: #c4d2b9;
+  --brand-color: #FF7E00;
 
   --primary-color: #000;
   --secondary-color: #ffffff;
@@ -59,7 +60,7 @@
 
 body {
   margin: 0;
-  font-family: "DM sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 /* =======================
@@ -285,11 +286,10 @@ main > img,
   align-items: center;
   justify-content: center;
 
-  background-color: var(--earth-clay);
-  color: white;
-
-  border: none;
+  background-color: var(--brand-color);
+  color: var(--primary-color);
   border-radius: 20px;
+  border: 1px solid var(--primary-color);
 
   text-decoration: none;
   text-align: center;
@@ -349,6 +349,46 @@ main > img,
 .mobileFilosofi {
   width: 100vw;
 }
+
+/* Second marquee */
+.newsletter-marquee {
+  width: max-content;
+  animation: marquee 10s linear infinite;
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Second carousel */
+
+.blog-section {
+  margin-top: var(--spacing-96);
+}
+.blog-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 696px;
+  gap: var(--spacing-16);
+  
+  overflow-x: auto;
+}
+
+.blog-card {
+  width: 696px;
+}
+
+.blog-card img {
+  width: 100%;
+  aspect-ratio: 696 / 489;
+  object-fit: cover;
+  display: block;
+  padding: 10px;
+}
+
+.blog-card h3 {
+  margin-top: 8px;
+  font-size: var(--font-size-title-mobile);
+}
+
 
 /* =======================
       DESKTOP
