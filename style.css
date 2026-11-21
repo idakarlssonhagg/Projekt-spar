@@ -362,7 +362,7 @@ main > img,
   }
 
   .marquee-content {
-    animation-duration: 15s;
+    animation: marquee 12s linear infinite;
   }
 
   .marquee-text {
