@@ -285,13 +285,42 @@
           </div>
         </div>
 
-        <div class="footerBox">
-          <div class="shippingAndLanguage">
-            <h2 class="footerText" class="shippingTo">Ship To: Sweden</h2>
-            <h2 class="Language">Language: svenska</h2>
+        <div class="footerMain">
+          <div class="logoSection">
+            <img
+              class="footerLogo"
+              src="Images/logga/loggasvartspar.svg"
+              alt="Spår Logo"
+            />
           </div>
-
-          <div class="mainFooter"></div>
+          <div class="newsRegister">
+            <h1 class="signUpTitle">Prenumerera på våra nyhetsbrev</h1>
+            <div class="signUp">
+              <h1 class="sellingPoint">
+                Få tidig tillgång till lansering, stilråd och mer
+              </h1>
+              <div class="mailAndRegister">
+                <form action="/registrera" method="post">
+                  <input
+                    class="inputEmail"
+                    type="email"
+                    name="email"
+                    placeholder="Fyll i din email adress"
+                    aria-label="Email adress"
+                    required
+                  />
+                  <button class="emailRegister" type="submit">
+                    Registrera
+                    <img
+                      class="registerArrow"
+                      src="Images/icons/White-arrow-right.svg"
+                      alt="register arrow"
+                    />
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </main>

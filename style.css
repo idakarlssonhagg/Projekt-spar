@@ -179,12 +179,14 @@ main > img,
 }
 
 .hero-button img {
+  display: block;
   width: var(--spacing-24);
   height: var(--spacing-24);
   flex-shrink: 0;
 }
 
 .hero-button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -207,6 +209,8 @@ main > img,
 }
 
 .hero-button span {
+  display: block;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -415,8 +419,69 @@ main > img,
 .blog-card h3 {
   margin: 8px 0 0;
   font-size: var(--font-size-title-mobile);
+  text-align: center;
 }
 
+/* footer */
+
+.footerMain {
+  margin-left: var(--spacing-24);
+}
+
+.footerLogo {
+  width: 60px;
+  height: 60px;
+  margin-top: var(--spacing-48);
+  margin-bottom: var(--spacing-24);
+}
+
+.signUpTitle {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-regular);
+  letter-spacing: 0%;
+}
+
+.sellingPoint {
+  color: var(--secondary-font-color);
+  font-weight: 400;
+  font-size: var(--font-size-body-large);
+  line-height: 160%;
+  letter-spacing: 0%;
+  margin-bottom: var(--spacing-24);
+}
+
+.inputEmail {
+  font-family: "DM Sans";
+  color: var(--secondary-font-color);
+  width: 100%;
+  max-width: 320px;
+  border: 0;
+  border-bottom: 1px solid var(--primary-color);
+  padding: 0 0 var(--spacing-16);
+  background: transparent;
+}
+
+.emailRegister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 145px;
+  min-height: 50px;
+  font-size: var(--font-size-body-medium);
+  color: var(--secondary-color);
+  background-color: black;
+  border-radius: 40px;
+  border: 0;
+  margin-bottom: var(--spacing-24);
+}
+
+.registerArrow {
+  width: 16px;
+  height: 16px;
+}
 /* =======================
       DESKTOP
 ======================= */
@@ -613,4 +678,11 @@ main > img,
   to {
     transform: translateX(-50%);
   }
+}
+
+.mailAndRegister form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-16);
 }
