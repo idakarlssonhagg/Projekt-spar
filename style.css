@@ -102,22 +102,23 @@ body {
 /* Header */
 
 .main-header {
-  background-color: var(--graphite);
+  position: absolute;
+  top: 42px;
+  left: 0;
+  z-index: 10;
+
+  background-color: transparent;
   height: 72px;
   width: 100%;
   padding: 0 var(--spacing-16);
 
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: 1fr auto;
+  justify-content: flex-end;
 }
 
-.logo img {
-  display: block;
-  object-fit: contain;
-  width: auto;
-  height: 64px;
-  max-width: 100%;
+.logo {
+  display: none;
 }
 
 .hamburger-menu {
@@ -125,7 +126,7 @@ body {
   width: 28px;
   height: 28px;
   object-fit: contain;
-  justify-self: end;
+  margin-left: auto;
 }
 
 .nav-links {
@@ -332,6 +333,66 @@ main > img,
   font-weight: var(--font-weight-medium);
 }
 
+/* Shoe showcase */
+
+.shoe-showcase {
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: var(--spacing-16);
+  display: none;
+}
+
+.shoe-video {
+  width: 90%;
+  max-width: 1674px;
+  aspect-ratio: 1674 / 650;
+  background-color: var(--stone);
+  margin: var(--spacing-24) auto;
+  overflow: hidden;
+}
+
+.shoe-video img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-16);
+  margin-top: var(--spacing-32);
+}
+
+.color-options .color {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.color-options .moss-green {
+  background-color: var(--moss-green);
+}
+
+.color-options .stone {
+  background-color: var(--stone);
+}
+
+.color-options .graphite {
+  background-color: var(--graphite);
+}
+
+.color-options .earth-clay {
+  background-color: var(--earth-clay);
+}
+
+.color-options .sage {
+  background-color: var(--soft-sage);
+}
+
 /* Philosophy */
 
 .philosophy {
@@ -510,7 +571,20 @@ main > img,
 
   /* Header */
 
+  header {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
   .main-header {
+    background-color: transparent;
+    height: 90px;
+    width: 100%;
+    padding: 0 4%;
+
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -518,6 +592,7 @@ main > img,
   }
 
   .logo {
+    display: block;
     flex-shrink: 0;
   }
 
@@ -539,7 +614,6 @@ main > img,
     display: flex;
     align-items: center;
     gap: var(--spacing-32);
-    justify-self: auto;
 
     list-style: none;
     padding: 0;
@@ -565,11 +639,37 @@ main > img,
     object-fit: contain;
   }
 
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 42px);
+  }
+
+  .hero {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .hero-buttons {
-    left: 8%;
-    right: auto;
+    position: absolute;
     bottom: 40px;
-    transform: none;
+    left: 25%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-16);
+    width: auto;
   }
 
   .news-section {
@@ -588,6 +688,12 @@ main > img,
   .news-light {
     font-size: var(--font-size-h2-subheading);
     font-weight: var(--font-weight-regular);
+  }
+
+  /* Shoe showcase */
+
+  .shoe-showcase {
+    display: block;
   }
 
   /* Philosophy section */
