@@ -10,7 +10,7 @@
   --graphite: #292d2c;
   --earth-clay: #a86f51;
   --soft-sage: #c4d2b9;
-  --brand-color: #FF7E00;
+  --brand-color: #ff7e00;
 
   --primary-color: #000;
   --secondary-color: #ffffff;
@@ -173,8 +173,9 @@ main > img,
 
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: var(--spacing-16);
-  width: 60%;
+  width: max-content;
 }
 
 .hero-button img {
@@ -186,15 +187,16 @@ main > img,
 .hero-button {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: var(--spacing-24);
   box-sizing: border-box;
-  width: 100%;
+  width: auto;
   white-space: nowrap;
   padding: var(--spacing-16) var(--spacing-24);
 
   background: rgba(41, 45, 44, 0.35);
   backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 
   border: 1px solid var(--secondary-color);
   border-radius: 50px;
@@ -326,16 +328,16 @@ main > img,
   font-weight: var(--font-weight-medium);
 }
 
-/* filosofi */
+/* Philosophy */
 
-.filosofi {
+.philosophy {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.titleFilosofi,
-.textFilosofi {
+.titlePhilosophy,
+.textPhilosophy {
   font-family: "DM sans";
   font-weight: var(--font-size-body-medium);
   font-size: var(--font-size-title-mobile);
@@ -345,9 +347,33 @@ main > img,
   padding-left: 11.5px;
   padding-right: 11.5px;
 }
+.titlePhilosophy,
+.textPhilosophy {
+  margin: 0;
+}
 
-.mobileFilosofi {
+.titlePhilosophy {
+  margin-top: var(--spacing-24);
+}
+
+.textPhilosophy {
+  margin-bottom: var(--spacing-24);
+}
+
+.Philosophy > .philosophy + .marquee {
+  margin-block: var(--spacing-24);
+}
+
+.philosophyText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+  text-align: center;
+}
+
+.mobilePhilosophy {
   width: 100vw;
+  height: auto;
 }
 
 /* Second marquee */
@@ -359,36 +385,37 @@ main > img,
 }
 
 /* Second carousel */
+/* Bloggpost */
 
 .blog-section {
-  margin-top: var(--spacing-96);
+  margin-top: 0;
+  margin-bottom: var(--spacing-24);
 }
 .blog-carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 696px;
+  grid-auto-columns: 100%;
   gap: var(--spacing-16);
-  
+
   overflow-x: auto;
 }
 
 .blog-card {
-  width: 696px;
+  width: 100%;
 }
 
 .blog-card img {
   width: 100%;
-  aspect-ratio: 696 / 489;
+  min-height: 489px;
   object-fit: cover;
   display: block;
   padding: 10px;
 }
 
 .blog-card h3 {
-  margin-top: 8px;
+  margin: 8px 0 0;
   font-size: var(--font-size-title-mobile);
 }
-
 
 /* =======================
       DESKTOP
@@ -415,7 +442,6 @@ main > img,
     font-size: var(--font-size-caption);
     white-space: nowrap;
   }
-
 
   /* Header */
 
@@ -461,7 +487,7 @@ main > img,
     font-size: var(--font-size-body-regular);
   }
 
-  .header-icons { 
+  .header-icons {
     display: flex;
     margin-left: auto;
     align-items: center;
@@ -479,11 +505,6 @@ main > img,
     right: auto;
     bottom: 40px;
     transform: none;
-    width: 30%;
-  }
-
-  .hero-button {
-    width: 60%;
   }
 
   .news-section {
@@ -504,10 +525,74 @@ main > img,
     font-weight: var(--font-weight-regular);
   }
 
+  /* Philosophy section */
+  .philosophy {
+    display: flex;
+  }
+
+  .philosophyBox {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: var(--spacing-32);
+    width: 100%;
+    padding: var(--spacing-48);
+  }
+
+  .philosophyText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .titlePhilosophy,
+  .textPhilosophy {
+    padding: 0;
+    text-align: left;
+    margin: 0;
+    text-align: center;
+  }
+
+  .titlePhilosophy {
+    font-size: var(--font-size-h2-subheading);
+    font-weight: var(--font-weight-bold);
+    line-height: 100%;
+  }
+
+  .textPhilosophy {
+    font-size: var(--font-size-h3-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body-large);
+  }
+
+  .imageBox {
+    grid-column: 2;
+  }
+
+  .mobilePhilosophy {
+    width: 100%;
+    height: auto;
+  }
+
   /* Carousel */
-    .product-carousel {
+  .product-carousel {
     grid-auto-columns: 19%;
     gap: var(--spacing-24);
+  }
+
+  .blog-carousel {
+    grid-auto-columns: 696px;
+  }
+
+  .blog-card {
+    width: 696px;
+  }
+
+  .blog-card img {
+    aspect-ratio: 696 / 489;
+    min-height: 0;
   }
 
   .product-selection {
