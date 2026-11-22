@@ -102,22 +102,23 @@ body {
 /* Header */
 
 .main-header {
-  background-color: var(--graphite);
+  position: absolute;
+  top: 42px;
+  left: 0;
+  z-index: 10;
+
+  background-color: transparent;
   height: 72px;
   width: 100%;
   padding: 0 var(--spacing-16);
 
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: 1fr auto;
+  justify-content: flex-end;
 }
 
-.logo img {
-  display: block;
-  object-fit: contain;
-  width: auto;
-  height: 64px;
-  max-width: 100%;
+.logo {
+  display: none;
 }
 
 .hamburger-menu {
@@ -125,7 +126,7 @@ body {
   width: 28px;
   height: 28px;
   object-fit: contain;
-  justify-self: end;
+  margin-left: auto;
 }
 
 .nav-links {
@@ -570,7 +571,20 @@ main > img,
 
   /* Header */
 
+  header {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
   .main-header {
+    background-color: transparent;
+    height: 90px;
+    width: 100%;
+    padding: 0 4%;
+
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -578,6 +592,7 @@ main > img,
   }
 
   .logo {
+    display: block;
     flex-shrink: 0;
   }
 
@@ -599,7 +614,6 @@ main > img,
     display: flex;
     align-items: center;
     gap: var(--spacing-32);
-    justify-self: auto;
 
     list-style: none;
     padding: 0;
@@ -625,11 +639,37 @@ main > img,
     object-fit: contain;
   }
 
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 42px);
+  }
+
+  .hero {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .hero-buttons {
-    left: 8%;
-    right: auto;
+    position: absolute;
     bottom: 40px;
-    transform: none;
+    left: 25%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-16);
+    width: auto;
   }
 
   .news-section {
