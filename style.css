@@ -505,6 +505,7 @@ main > img,
   gap: var(--spacing-16);
 
   overflow-x: auto;
+  padding-bottom: 30px;
 }
 
 .blog-card {
