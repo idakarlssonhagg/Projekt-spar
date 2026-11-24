@@ -597,7 +597,18 @@ main > img,
 @media (min-width: 768px) {
   /* Marquee */
 
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
   .marquee {
+    position: relative;
+    top: 0;
+    margin: 0;
     height: 42px;
   }
 
@@ -620,13 +631,18 @@ main > img,
 
   header {
     position: absolute;
-    top: 42px;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
   }
 
   .main-header {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    z-index: 10;
+
     background: transparent;
     height: 90px;
     width: 100%;
@@ -693,7 +709,7 @@ main > img,
   .hero-container {
     position: relative;
     width: 100%;
-    height: calc(100vh - 42px);
+    height: 100vh;
   }
 
   .hero {
