@@ -23,7 +23,7 @@
   --font-size-h2-subheading: 48px;
   --font-size-h3-body: 40px;
   --font-size-h4-title: 32px;
-  --font-size-title-mobile: 25px;
+  --font-size-title-mobile: 24px;
   --font-size-body-large: 20px;
   --font-size-body-regular: 16px;
   --font-size-caption: 14px;
@@ -186,7 +186,7 @@ main > img,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 80%;
 }
 
 .hero-buttons {
@@ -236,6 +236,39 @@ main > img,
   display: block;
   line-height: 1;
   white-space: nowrap;
+}
+
+/* Hero copy */
+
+.hero-copy {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  max-width: 430px;
+  text-align: center;
+  color: var(--secondary-color);
+  text-shadow:
+    0 2px 12px rgba(63, 63, 63, 0.5),
+    0 0 24px rgba(71, 71, 71, 0.409);
+}
+
+.hero-copy h1 {
+  margin: 0 0 var(--spacing-16);
+  font-size: 28px;
+  width: fit-content;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.hero-copy h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 160%;
 }
 
 /* News image */
@@ -348,6 +381,7 @@ main > img,
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .product-card h3 {
@@ -530,17 +564,33 @@ main > img,
   text-align: center;
 }
 
-/* footer */
+/* footer, first part */
+
+.footer {
+  background-color: var(--secondary-color);
+}
 
 .footerMain {
   margin-left: var(--spacing-24);
+  background-color: var(--secondary-color);
 }
 
-.footerLogo {
-  width: 60px;
-  height: 60px;
-  margin-top: var(--spacing-48);
-  margin-bottom: var(--spacing-24);
+.logoSection {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+footer .footerLogo {
+  width: 212px;
+  height: 212px;
+  margin: 0;
+}
+
+.newsRegister {
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: var(--spacing-24);
+  background-color: var(--secondary-color);
 }
 
 .signUpTitle {
@@ -590,6 +640,94 @@ main > img,
   width: 16px;
   height: 16px;
 }
+
+.mailAndRegister form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-16);
+}
+
+footer .footerLogo {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-top: var(--spacing-48);
+  margin-bottom: var(--spacing-24);
+}
+
+/* footer, Second part */
+
+.footerGrayBox {
+  background-color: var(--secondary-bg-color);
+  padding: var(--spacing-48) var(--spacing-24) var(--spacing-24);
+}
+
+.footerBoxes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  column-gap: var(--spacing-24);
+  row-gap: 0;
+}
+
+.footerBox.text {
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+}
+
+.footerTitle {
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: var(--spacing-16);
+}
+
+.footerText {
+  margin: 4px 0 0;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-body-large);
+}
+
+footer .social-media {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--spacing-32);
+  margin-bottom: var(--spacing-32);
+}
+
+footer .social-media img {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.shippingAndLanguage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-16) var(--spacing-24);
+  margin-top: var(--spacing-32);
+}
+
+.salText {
+  font-size: var(--font-size-body-medium);
+  font-weight: var(--font-weight-regular);
+  margin: 0;
+}
+
+.rightsAndPolicies {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: var(--spacing-24);
+  margin-top: var(--spacing-24);
+}
+
 /* =======================
       DESKTOP
 ======================= */
@@ -827,6 +965,7 @@ main > img,
     grid-auto-columns: 19%;
     gap: var(--spacing-24);
   }
+  border-radius: 8px;
 
   .blog-carousel {
     grid-auto-columns: 696px;
@@ -843,6 +982,92 @@ main > img,
 
   .product-selection {
     padding: var(--spacing-32) var(--spacing-48);
+  }
+
+  /* Hero copy */
+  .hero-copy {
+    top: 50%;
+    left: 160px;
+    transform: translateY(-50%);
+    width: 620px;
+    max-width: calc(100% - 320px);
+    text-align: left;
+  }
+
+  .hero-copy h1 {
+    font-size: 98px;
+    width: fit-content;
+    max-width: none;
+    white-space: nowrap;
+  }
+
+  .hero-copy h2 {
+    max-width: 620px;
+    font-size: 32px;
+  }
+
+  /* Footer */
+
+  .footerGrayBox {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    column-gap: var(--spacing-64);
+    padding: var(--spacing-48) var(--spacing-64) var(--spacing-24);
+  }
+
+  .footerBoxes {
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    column-gap: var(--spacing-32);
+  }
+
+  footer .social-media {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  .shippingAndLanguage {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+  }
+
+  .rightsAndPolicies {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    align-self: end;
+  }
+
+  /* Footer signup */
+  .footerMain {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    column-gap: var(--spacing-64);
+    margin: 0;
+    padding: var(--spacing-48) var(--spacing-64);
+  }
+
+  .newsRegister {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .logoSection {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  footer .footerLogo {
+    width: 212px;
+    height: 212px;
+    margin: 0;
   }
 }
 
@@ -886,11 +1111,4 @@ main > img,
     transform: scale(1);
     box-shadow: 0 0 0 0 transparent;
   }
-}
-
-.mailAndRegister form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-16);
 }
