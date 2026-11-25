@@ -683,6 +683,7 @@ footer .footerLogo {
   font-weight: var(--font-weight-medium);
   line-height: 150%;
   margin: 0;
+  margin-right: 8px;
   margin-bottom: var(--spacing-16);
 }
 
@@ -965,7 +966,6 @@ footer .social-media img {
     grid-auto-columns: 19%;
     gap: var(--spacing-24);
   }
-  border-radius: 8px;
 
   .blog-carousel {
     grid-auto-columns: 696px;
