@@ -965,7 +965,6 @@ footer .social-media img {
     grid-auto-columns: 19%;
     gap: var(--spacing-24);
   }
-  border-radius: 8px;
 
   .blog-carousel {
     grid-auto-columns: 696px;
