@@ -277,7 +277,8 @@ main > img,
 .news-section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-16);
+  gap: 4px;
+  margin-top: 4px;
 }
 
 .news-section img {
@@ -378,6 +379,15 @@ main > img,
   scroll-snap-align: start;
 }
 
+.product-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: start;
+  margin: var(--spacing-8);
+}
+
+
 .product-card img {
   display: block;
   width: 100%;
@@ -387,9 +397,26 @@ main > img,
 }
 
 .product-card h3 {
-  margin-top: var(--spacing-8);
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
   font-size: var(--font-size-title-mobile);
   font-weight: var(--font-weight-medium);
+}
+
+.product-info p {
+  grid-column: 1;
+  grid-row: 2;
+  flex-shrink: 0;
+  margin-top: var(--spacing-8) 0 0;
+  font-size: var(--font-size-caption);
+}
+
+.product-price {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  font-size: var(--font-size-caption);
 }
 
 /* Shoe showcase */
@@ -483,16 +510,20 @@ main > img,
   justify-content: center;
 }
 
-.titlePhilosophy,
-.textPhilosophy {
+.titlePhilosophy h1 {
   font-family: "DM sans";
-  font-weight: var(--font-size-body-medium);
-  font-size: var(--font-size-title-mobile);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h1);
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
   padding-left: 11.5px;
   padding-right: 11.5px;
+}
+
+.textPhilosophy p {
+  font-size: var(--font-size-h4-title);
+  line-height: 1.2;
 }
 .titlePhilosophy,
 .textPhilosophy {
@@ -735,16 +766,8 @@ footer .social-media img {
       DESKTOP
 ======================= */
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   /* Marquee */
-
-  header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-  }
 
   .marquee {
     position: relative;
