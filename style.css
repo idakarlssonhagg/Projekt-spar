@@ -685,6 +685,7 @@ footer .footerLogo {
   font-weight: var(--font-weight-medium);
   line-height: 150%;
   margin: 0;
+  margin-right: 8px;
   margin-bottom: var(--spacing-16);
 }
 
