@@ -230,6 +230,7 @@ main > img,
   color: var(--secondary-color);
   text-decoration: none;
   font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
 }
 
 .hero-button span {
@@ -357,6 +358,7 @@ main > img,
   text-decoration: none;
   text-align: center;
   font-size: var(--font-size-body-regular);
+  line-height: var(--line-height-body-regular);
 }
 
 /* Product carousel */
@@ -597,7 +599,7 @@ footer .footerLogo {
   font-family: "DM Sans";
   font-weight: 400;
   font-size: var(--font-size-body-large);
-  line-height: var(--line-height-body-regular);
+  line-height: var(--line-height-body-large);
   letter-spacing: 0%;
 }
 
@@ -605,7 +607,7 @@ footer .footerLogo {
   color: var(--secondary-font-color);
   font-weight: 400;
   font-size: var(--font-size-body-large);
-  line-height: 160%;
+  line-height: var(--line-height-body-large);
   letter-spacing: 0%;
   margin-bottom: var(--spacing-24);
 }
@@ -690,7 +692,7 @@ footer .footerLogo {
   margin: 4px 0 0;
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-body-large);
+  line-height: var(--font-size-caption);
 }
 
 footer .social-media {
@@ -829,6 +831,7 @@ footer .social-media img {
     color: var(--secondary-color);
     text-decoration: none;
     font-size: var(--font-size-body-regular);
+    line-height: var(--line-height-body-regular);
   }
 
   .header-icons {
@@ -900,6 +903,7 @@ footer .social-media img {
   .news-dark,
   .news-light {
     font-size: var(--font-size-h2-subheading);
+    line-height: var(--line-height-h2-subheading);
     font-weight: var(--font-weight-regular);
   }
 
@@ -941,6 +945,7 @@ footer .social-media img {
 
   .titlePhilosophy {
     font-size: var(--font-size-h2-subheading);
+    line-height: var(--font-size-h2-subheading);
     font-weight: var(--font-weight-bold);
     line-height: 100%;
   }
@@ -965,7 +970,6 @@ footer .social-media img {
     grid-auto-columns: 19%;
     gap: var(--spacing-24);
   }
-  border-radius: 8px;
 
   .blog-carousel {
     grid-auto-columns: 696px;
