@@ -127,7 +127,7 @@
 
         <div class="desktop-image">
           <img src="Images/nyhet/NYHETSBILD2.png" alt="#" />
-          <h2 class="news-light">KOLLEKTION</h2>
+          <h2 class="news-dark">KOLLEKTION</h2>
         </div>
       </section>
 
@@ -139,7 +139,7 @@
 
         <div class="product-carousel">
           <article class="product-card">
-            <img src="Images/produkter/JACKA PRODUKT.png" alt="Produkt 1" />
+            <img src="Images/produkter/JACKA PRODUKT.png" alt="Jacka" />
               <div class="product-info">
                 <h3>Vildmark</h3> 
                 <p>Jacka</p>
@@ -149,8 +149,8 @@
 
           <article class="product-card">
             <img
-              src="Images/produkter/Klockor_accessoarer_392x602.jpg"
-              alt="Produkt 2"
+              src="Images/produkter/Klocka_accessoarer_done_392x602.jpg"
+              alt="Klocka"
             />
               <div class="product-info">
                 <h3>Nordplus</h3>
@@ -162,7 +162,7 @@
           <article class="product-card">
             <img
               src="Images/produkter/beauty_footcream_done_392x602.jpg"
-              alt="Produkt 3"
+              alt="Fotkräm"
             />
               <div class="product-info">
                 <h3>Skavfri</h3>
@@ -174,7 +174,7 @@
           <article class="product-card">
             <img
               src="Images/produkter/Ring_kompass_accessoar_392x602.jpg"
-              alt="Produkt 4"
+              alt="Ring"
             />
               <div class="product-info">
                 <h3>Ledpunkt</h3>
@@ -184,7 +184,7 @@
           </article>
 
           <article class="product-card">
-            <img src="Images/produkter/KEPS PRODUKT.png" alt="Produkt 5" />
+            <img src="Images/produkter/KEPS PRODUKT.png" alt="Keps" />
               <div class="product-info">
                 <h3>Skogsvind</h3>
                 <p>Keps</p>
@@ -195,12 +195,36 @@
           <article class="product-card">
             <img
               src="Images/produkter/T_shirt_Merch_Logga_fram_bak_Jpg.jpg"
-              alt="Produkt 7"
+              alt="T-shirt"
             />
               <div class="product-info">
                 <h3>Naturspår</h3>
                 <p>T-shirt</p>
                 <span class="product-price">399,00 kr</span>
+              </div>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="Images/produkter/hiking_stick_done.jpg"
+              alt="Vandringsstav"
+            />
+              <div class="product-info">
+                <h3>Stigkraft</h3>
+                <p>Vandringsstavar</p>
+                <span class="product-price">459,00 kr</span>
+              </div>
+          </article>
+
+          <article class="product-card">
+            <img
+            src="Images/produkter/bag.png"
+            alt="Väska"
+            />
+              <div class="product-info">
+                <h3>Fjällrygg</h3>
+                <p>Väska</p>
+                <span class="product-price">1099,00 kr</span>
               </div>
           </article>
         </div>
@@ -209,14 +233,17 @@
       <section class="shoe-showcase">
         <!-- Shoe video -->
         <div class="shoe-video">
-          <img src="Images/1BILD.png" alt="sko från spår" />
+          <video autoplay muted loop playsinline>
+            <source src="Images/video/KONF SPÅR_1.mp4" type="video/mp4" />
+            Din webbläsare stöder inte video.
+          </video>
         </div>
 
         <div class="color-options">
           <span class="color moss-green"></span>
+          <span class="color earth-clay"></span>
           <span class="color stone"></span>
           <span class="color graphite"></span>
-          <span class="color earth-clay"></span>
           <span class="color sage"></span>
         </div>
       </section>
@@ -403,7 +430,6 @@
         </div>
       </footer>
     </main>
-
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
